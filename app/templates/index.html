@@ -1,0 +1,17 @@
+<html>
+    <head>
+        {% if title %}
+        <title> {{ title }}- Microblog </title>
+        {%else %}
+        <title> Welcome to Microblog! </title>
+        {% endif %}
+    </head>
+
+    <body>
+        <h1> Hello,  {{user.username}} ! </h1>
+        <h2> There are {{posts|length}} books! </h2>
+        {% for post in posts %}
+        <div><p> {{ post.author}} {{ post.body}} </p></div>
+        {% endfor %}
+    </body>
+</html> 
